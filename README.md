@@ -23,7 +23,7 @@ This repository studies a reporting protocol for workplace sexual harassment and
 ```
 
 > [!CAUTION]
-> This is a research prototype and **not** a support service, a legal instrument, or a substitute for trauma-informed care. Nothing here should be deployed against real reporters without institutional review, legal counsel in the relevant jurisdiction, and a survivor-advocacy partner. See §7.
+> This is a research prototype and **not** a support service, a legal instrument, or a substitute for trauma-informed care. Nothing here should be deployed against real reporters without institutional review, legal counsel in the relevant jurisdiction, and a survivor-advocacy partner. 
 
 ## 2. Problem statement
 
@@ -36,15 +36,11 @@ Sexual harassment at work and harassment or stalking on online platforms share a
 | **The single-report dismissal.** One report is discountable as one person's word; patterns are not. | To learn that they are not the only one, a reporter must first expose themselves — the information they need to justify the risk is available only after taking the risk. |
 | **Cross-context blindness.** The same person harassing a colleague at work and stalking a different woman on a social platform appears as two unrelated incidents. | The evidence that is most probative — recurrence across environments — is precisely the evidence no single institution can observe. |
 
-SafeProof targets the third and fourth rows directly, and mitigates the first two as a consequence. It does not attempt to adjudicate reports, and deliberately does not attempt to determine truth; it establishes *distinctness*, *timing*, and *cardinality* — properties that are cryptographically checkable — and leaves adjudication to the institutional process that a threshold event triggers.
-
 ## 3. Protocol
 
 ### 3.1 Blinded target identifiers
 
-A report is filed against a **target identifier**: a work email, an employee number, a platform handle, a Discord user id — something that persistently and uniquely denotes the accused, never the reporter. Committing `H(identifier)` directly to a public ledger would be catastrophic: the identifier space is small and enumerable, so any observer could dictionary-attack the ledger and learn who has been reported and how often. The prototype therefore derives the ledger key through an **oblivious pseudorandom function**, `tag = OPRF_k(identifier)`, evaluated jointly by the client and a key-holding service that never sees the identifier and cannot compute tags offline without a client interaction.
-
-This is the same defence Callisto's matching escrow applies to perpetrator identifiers [A1], and it is load-bearing: without it, the anonymity of the *reporter* is preserved while the *accused* is exposed to unaccountable public accusation, which is a different but equally serious failure.
+A report is filed against a **target identifier**: a work email, an employee number, a platform handle, a Discord user id — something that persistently and uniquely denotes the accused, never the reporter. Committing `H(identifier)` directly to a public ledger would be catastrophic: the identifier space is small and enumerable, so any observer could dictionary-attack the ledger and learn who has been reported and how often. The prototype therefore derives the ledger key through an **oblivious pseudorandom function**, `tag = OPRF_k(identifier)`, evaluated jointly by the client and a key-holding service that never sees the identifier and cannot compute tags offline without a client interaction. This is the same defence Callisto's matching escrow applies to perpetrator identifiers [A1], and it is load-bearing: without it, the anonymity of the *reporter* is preserved while the *accused* is exposed to unaccountable public accusation, which is a different but equally serious failure.
 
 ### 3.2 Anonymous evidence commitment
 
@@ -80,10 +76,6 @@ Two mechanisms are under evaluation for what the threshold *unlocks*, and they d
 |---|---|---|
 | **Recursive proof over the nullifier set** | The prover folds `k` report proofs into one recursive proof of cardinality; the intermediary verifies the aggregate. | The proof system only. The intermediary learns `k` and nothing else — not even encrypted identities. |
 | **`k`-of-`n` matching escrow** | Each report carries a share of a per-`tag` key encrypting the reporter's contact channel; the `k`-th report makes reconstruction possible [A1, A4]. | The escrow operator's key handling, and the assumption that fewer than `k` shares leak nothing. |
-
-The first is stronger and reveals less; the second is what makes the *next* step possible at all, because a proof of cardinality tells an HR office that five people exist but gives it no way to reach them. The intended composition is the first as the disclosed artefact and the second as an opt-in, per-reporter escrow — a reporter may cross the threshold while withholding their own contact share.
-
-Crossing the threshold notifies a designated intermediary — a Title IX office, an HR function, a platform trust & safety team, or an NGO — which may then open a consensual process inviting reporters to come forward *with* institutional and legal support. The reporters are invited; they are never surfaced.
 
 ```mermaid
 flowchart TD
@@ -144,8 +136,6 @@ Because the tag is derived from an identifier rather than from a context, report
 - **Reporter-asserted linking.** A reporter who knows two identifiers belong to the same person files under a linked tag pair. Cheap, no new trust, and wrong whenever the reporter is mistaken or malicious.
 - **Attested linking.** An issuer or platform attests co-reference (for example, a verified email on a platform account) and the circuit consumes the attestation. Sound, but reintroduces a party that learns which identifiers are being linked.
 
-Cross-context aggregation is gated on explicit per-report consent in both designs. A reporter who files against a work address must opt in before that report can contribute to a threshold count spanning a social platform, because the two contexts carry different retaliation exposures and the reporter — not the protocol — is the one who can weigh them.
-
 
 ## 4. Ethical and legal considerations
 
@@ -155,7 +145,6 @@ These are not appendices to the design; several of them constrain it.
 - **Consent is per-step, never inherited.** Filing is not consent to escalation; escalation is not consent to identification; identification to one intermediary is not consent to another.
 - **The threshold parameter is a policy instrument.** Setting `k` trades the risk of an unheard reporter against the risk of an unfounded investigation. It belongs to the deploying institution and its survivor-advocacy partner, not to this repository.
 - **Due process for the accused.** A threshold event is an input to an investigation, never a finding. The system deliberately produces no evidence of wrongdoing — only evidence that distinct people filed.
-- **Immutability versus erasure.** See the note in §4; unresolved and treated as a research obligation.
 - **Not a support service.** Any deployment must route to human support, and must not present cryptographic guarantees as safety.
 
 ## References
