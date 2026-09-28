@@ -1,11 +1,7 @@
-# SafeProof
+# SafeProof: Privacy-preserving harassment reporting with nullifier-based Sybil resistance and threshold zero-knowledge disclosure.
 
-**Privacy-preserving harassment reporting with nullifier-based Sybil resistance and threshold zero-knowledge disclosure.**
-Built for the [ACM womENcourage™ 2026 Hackathon](https://womencourage.acm.org/2026/index.php/join-the-hackathon/).
-
-[Project page](https://ttgenproject.github.io/safeproof-zkp/) · [Slides](https://docs.google.com/presentation/d/1safyND00YSxTISNe_1uOfcl1YdIe6vnb/edit?usp=sharing)
-
-## Idea
+## Overview
+The project is mainly built for the [ACM womENcourage™ 2026 Hackathon](https://womencourage.acm.org/2026/index.php/join-the-hackathon/), with the technical details in[Project page](https://ttgenproject.github.io/safeproof-zkp/), and the pitch version of the hackathon in [Slides](https://docs.google.com/presentation/d/1safyND00YSxTISNe_1uOfcl1YdIe6vnb/edit?usp=sharing)
 
 Reporting harassment means exposing yourself before you know whether anyone else has reported the same person. SafeProof lets a reporter prove two things without revealing their identity or their evidence:
 
@@ -25,17 +21,16 @@ The intermediary (HR, trust & safety, or an NGO) learns only that the threshold 
 
 ## Limits
 
-> [!CAUTION]
-> SafeProof is a research prototype. It is not a support service, a legal instrument, or a substitute for trauma-informed care.
-
 - Sybil resistance is only as strong as the issuer's personhood check.
 - A threshold event is a reason to investigate, never a finding. Consent is required at every step.
 - The threshold `k` is a policy choice for the deploying institution and its survivor-advocacy partner.
+> [!CAUTION]
+> SafeProof is a research prototype. It is not a support service, a legal instrument, or a substitute for trauma-informed care.
 
 ## Repository
 
 ```text
-index.html, assets/          static project page (from Academic-Project-Page-Template, MIT)
+index.html, assets/          static page 
 content/site.json            page metadata and links
 content/sections/*.md        page text
 content/media/               figures
