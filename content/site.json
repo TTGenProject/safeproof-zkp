@@ -34,8 +34,13 @@
       "type": "code"
     },
     {
+      "label": "Slides",
+      "href": "https://docs.google.com/presentation/d/1safyND00YSxTISNe_1uOfcl1YdIe6vnb/edit?usp=sharing",
+      "type": "slides"
+    },
+    {
       "label": "Protocol spec",
-      "href": "https://github.com/TTGenProject/safeproof-zkp#3-protocol",
+      "href": "https://github.com/TTGenProject/safeproof-zkp#protocol",
       "type": "paper"
     }
   ],

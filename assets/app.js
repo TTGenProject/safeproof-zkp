@@ -279,6 +279,15 @@ function renderButtonIcon(type) {
     `
   }
 
+  if (type === "slides") {
+    return `
+      <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+        <path d="M4.5 4.5h15A1.5 1.5 0 0 1 21 6v9a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 15V6a1.5 1.5 0 0 1 1.5-1.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        <path d="M12 16.5V20M8.5 20h7M8 12.5l2.5-2.5 2 2 3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    `
+  }
+
   if (type === "bibtex") {
     return `
       <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
