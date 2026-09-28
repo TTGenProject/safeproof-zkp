@@ -4,12 +4,6 @@ This repository studies a reporting protocol for workplace sexual harassment and
 
 **Project page (ACM womENcourage™ 2026 Hackathon):** https://ttgenproject.github.io/safeproof-zkp/
 
-The page is a static site built from [Academic-Project-Page-Template](https://github.com/YizheXie/Academic-Project-Page-Template) (MIT, see [assets/LICENSE-template.txt](assets/LICENSE-template.txt)). Its text lives in [content/sections/](content/sections/), its metadata in [content/site.json](content/site.json), and its figures in [content/media/](content/media/). To preview it locally, serve the repository root over HTTP, because the page fetches its JSON and Markdown:
-
-```bash
-python -m http.server 8000   # then open http://localhost:8000
-```
-
 ---
 
 ## 1. Repository structure
@@ -69,8 +63,11 @@ and the ledger rejects any nullifier already present. This is the Semaphore/Zcas
 
 The circuit proves, in zero knowledge, that (i) the leaf `Commit(s)` is in the registry tree at a known root, (ii) the nullifier is correctly derived from the same `s` and the claimed `tag`, and (iii) the commitment `c` is bound to this report. It reveals `(root, tag, nullifier, c, t)` and nothing else.
 
-> [!IMPORTANT]
-> Sybil resistance here is *exactly* one-report-per-registered-person-per-target, and no stronger. It does not establish that the reporter had any contact with the accused, and it inherits every weakness of the issuer's personhood check. A registry that admits duplicates admits Sybils; the cryptography faithfully enforces a property the issuer may have failed to establish.
+The page is a static site built from [Academic-Project-Page-Template](https://github.com/YizheXie/Academic-Project-Page-Template) (MIT, see [assets/LICENSE-template.txt](assets/LICENSE-template.txt)). Its text lives in [content/sections/](content/sections/), its metadata in [content/site.json](content/site.json), and its figures in [content/media/](content/media/). Preview locally:
+
+```bash
+python -m http.server 8000   # then open http://localhost:8000
+```
 
 ### 3.4 Threshold proof and escalation
 
