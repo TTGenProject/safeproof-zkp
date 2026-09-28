@@ -17,6 +17,8 @@
     .e { stroke: #3f3645; stroke-width: 2; fill: none; marker-end: url(#a); }
   </style>
 
+  <rect x="0" y="0" width="1310" height="680" rx="20" fill="#ffffff"/>
+
   <!-- groups -->
   <rect x="250" y="30" width="510" height="470" rx="18" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
   <text class="g" x="272" y="58" fill="#1e3a8a">REPORTER CLIENT · ON DEVICE</text>
@@ -87,7 +89,7 @@
   <path class="e" d="M475 248 L528 282"/>
   <path class="e" d="M475 422 L528 336"/>
   <path class="e" d="M815 118 L632 118 L632 248" stroke-dasharray="7 6"/>
-  <text class="lbl" x="700" y="108">Merkle path</text>
+  <text class="lbl" x="645" y="108">Merkle path</text>
   <path class="e" d="M735 290 L813 270"/>
   <path class="e" d="M735 330 L813 412"/>
   <path class="e" d="M1015 268 L1078 250"/>

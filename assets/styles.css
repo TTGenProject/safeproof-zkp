@@ -370,7 +370,7 @@ select {
 }
 
 .hero__summary {
-  max-width: 50rem;
+  max-width: 60rem;
   margin: 18px auto 0;
   font-size: 0.95rem;
   text-align: center;
