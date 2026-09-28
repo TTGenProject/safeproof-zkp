@@ -44,9 +44,24 @@ Planned components: web intake UI, proof service, ZK circuits, ledger contracts,
 
 ## References
 
-- Rajan et al. [Callisto](https://dl.acm.org/doi/10.1145/3209811.3212699). ACM COMPASS 2018.
-- [Zcash Protocol Specification](https://zips.z.cash/protocol/protocol.pdf): nullifiers.
-- [Semaphore](https://semaphore.pse.dev/): Merkle membership with nullifiers.
-- Shamir. [How to Share a Secret](https://dl.acm.org/doi/10.1145/359168.359176). CACM 1979.
-- Jarecki, Kiayias, Krawczyk. [OPRF-based PPSS](https://eprint.iacr.org/2014/650). ePrint 2014/650.
-- Gabizon et al. [PLONK](https://eprint.iacr.org/2019/953) · Groth. [Groth16](https://eprint.iacr.org/2016/260).
+### Academic references
+
+[A1] Rajan, A., Qin, L., Archer, D. W., Boneh, D., Lepoint, T., Varia, M. "Callisto: A Cryptographic Approach to Detecting Serial Perpetrators of Sexual Misconduct." ACM COMPASS 2018. https://dl.acm.org/doi/10.1145/3209811.3212699
+
+[A2] Hopwood, D., Bowe, S., Hornby, T., Wilcox, N. "Zcash Protocol Specification" — nullifier construction for double-spend prevention under anonymity. https://zips.z.cash/protocol/protocol.pdf
+
+[A3] Semaphore — anonymous signalling with Merkle-tree membership and external nullifiers. https://semaphore.pse.dev/
+
+[A4] Shamir, A. "How to Share a Secret." Communications of the ACM, 22(11), 1979. https://dl.acm.org/doi/10.1145/359168.359176
+
+[A5] Jarecki, S., Kiayias, A., Krawczyk, H. "Round-Optimal Password-Protected Secret Sharing and T-PAKE in the Password-Only Model" — OPRF constructions underlying blinded identifier derivation. IACR ePrint 2014/650. https://eprint.iacr.org/2014/650
+
+[A6] Gabizon, A., Williamson, Z. J., Ciobotaru, O. "PLONK: Permutations over Lagrange-bases for Oecumenical Noninteractive arguments of Knowledge." IACR ePrint 2019/953. https://eprint.iacr.org/2019/953
+
+[A7] Groth, J. "On the Size of Pairing-Based Non-interactive Arguments." EUROCRYPT 2016. https://eprint.iacr.org/2016/260
+
+### Code inspirations
+
+[C1] Semaphore protocol — reference implementation of the membership-plus-nullifier circuit pattern. https://github.com/semaphore-protocol/semaphore
+
+[C2] Tornado Cash circuits — Merkle membership and nullifier gadgets in circom. https://github.com/tornadocash/tornado-core
