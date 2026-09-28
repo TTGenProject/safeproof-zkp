@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1310 680" role="img" aria-labelledby="t d">
+  <title id="t">SafeProof protocol architecture</title>
+  <desc id="d">The accused identifier is blinded by an OPRF into a tag, from which the reporter client derives a nullifier. Evidence stays on the device and is committed with a salt. The report proof shows registry membership, correct nullifier derivation and binding to the commitment, and is posted to the ledger's nullifier set and commitment log. Once k distinct nullifiers exist under one tag, a threshold aggregation proof reveals only the count to an intermediary, who can then send a consent-based invitation to the reporters.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 10 5 0 10z" fill="#3f3645"/>
+    </marker>
+  </defs>
+  <style>
+    text { font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+    text:not([fill]) { fill: #241d2a; }
+    .t { font-size: 18px; font-weight: 700; }
+    .s { font-size: 15px; fill: #4b4350; }
+    .i { font-size: 15px; font-style: italic; fill: #4b4350; }
+    .g { font-size: 14px; font-weight: 700; letter-spacing: .06em; }
+    .lbl { font-size: 14px; fill: #3f3645; }
+    .e { stroke: #3f3645; stroke-width: 2; fill: none; marker-end: url(#a); }
+  </style>
+
+  <!-- groups -->
+  <rect x="250" y="30" width="510" height="470" rx="18" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5"/>
+  <text class="g" x="272" y="58" fill="#1e3a8a">REPORTER CLIENT · ON DEVICE</text>
+  <rect x="790" y="30" width="250" height="470" rx="18" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+  <text class="g" x="810" y="58" fill="#14532d">TAMPER-EVIDENT LEDGER</text>
+
+  <!-- inputs -->
+  <rect x="30" y="76" width="190" height="88" rx="12" fill="#fde68a" stroke="#b45309" stroke-width="2"/>
+  <text class="t" x="125" y="108" text-anchor="middle">Accused identifier</text>
+  <text class="s" x="125" y="132" text-anchor="middle">work email · handle</text>
+  <text class="s" x="125" y="152" text-anchor="middle">employee id</text>
+
+  <rect x="30" y="378" width="190" height="88" rx="12" fill="#fde68a" stroke="#b45309" stroke-width="2"/>
+  <text class="t" x="125" y="414" text-anchor="middle">Evidence</text>
+  <text class="s" x="125" y="440" text-anchor="middle">stays on the device</text>
+
+  <!-- client -->
+  <rect x="275" y="80" width="200" height="76" rx="12" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="2"/>
+  <text class="t" x="375" y="112" text-anchor="middle">OPRF blinding</text>
+  <text class="i" x="375" y="136" text-anchor="middle">tag = OPRF_k(id)</text>
+
+  <rect x="275" y="210" width="200" height="76" rx="12" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="2"/>
+  <text class="t" x="375" y="242" text-anchor="middle">Nullifier</text>
+  <text class="i" x="375" y="266" text-anchor="middle">n = PRF_s(tag)</text>
+
+  <rect x="275" y="380" width="200" height="84" rx="12" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="2"/>
+  <text class="t" x="375" y="414" text-anchor="middle">Salted commitment</text>
+  <text class="i" x="375" y="440" text-anchor="middle">c = Commit(evidence, r)</text>
+
+  <rect x="530" y="250" width="205" height="110" rx="12" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="2"/>
+  <text class="t" x="632" y="286" text-anchor="middle">Report proof</text>
+  <text class="s" x="632" y="312" text-anchor="middle">membership · derivation</text>
+  <text class="s" x="632" y="334" text-anchor="middle">· binding (ZK)</text>
+
+  <!-- ledger -->
+  <rect x="815" y="80" width="200" height="76" rx="12" fill="#bbf7d0" stroke="#15803d" stroke-width="2"/>
+  <text class="t" x="915" y="112" text-anchor="middle">Registry root</text>
+  <text class="i" x="915" y="136" text-anchor="middle">personhood credentials</text>
+
+  <rect x="815" y="230" width="200" height="76" rx="12" fill="#bbf7d0" stroke="#15803d" stroke-width="2"/>
+  <text class="t" x="915" y="262" text-anchor="middle">Nullifier set</text>
+  <text class="i" x="915" y="286" text-anchor="middle">double-report rejection</text>
+
+  <rect x="815" y="380" width="200" height="76" rx="12" fill="#bbf7d0" stroke="#15803d" stroke-width="2"/>
+  <text class="t" x="915" y="412" text-anchor="middle">Commitment log</text>
+  <text class="i" x="915" y="436" text-anchor="middle">(tag, c, t)</text>
+
+  <!-- outcome -->
+  <rect x="1080" y="190" width="205" height="100" rx="12" fill="#e9d5ff" stroke="#7e22ce" stroke-width="2"/>
+  <text class="t" x="1182" y="224" text-anchor="middle">Threshold proof</text>
+  <text class="s" x="1182" y="250" text-anchor="middle">k distinct nullifiers</text>
+  <text class="s" x="1182" y="272" text-anchor="middle">under one tag</text>
+
+  <rect x="1080" y="400" width="205" height="84" rx="12" fill="#fecaca" stroke="#b91c1c" stroke-width="2"/>
+  <text class="t" x="1182" y="434" text-anchor="middle">Intermediary</text>
+  <text class="s" x="1182" y="460" text-anchor="middle">HR · Title IX · T&amp;S · NGO</text>
+
+  <rect x="1080" y="540" width="205" height="100" rx="12" fill="#fecaca" stroke="#b91c1c" stroke-width="2"/>
+  <text class="t" x="1182" y="574" text-anchor="middle">Consent-based</text>
+  <text class="t" x="1182" y="598" text-anchor="middle">invitation</text>
+  <text class="s" x="1182" y="622" text-anchor="middle">each reporter opts in</text>
+
+  <!-- edges -->
+  <path class="e" d="M220 120 L273 118"/>
+  <path class="e" d="M220 422 L273 422"/>
+  <path class="e" d="M375 156 L375 208"/>
+  <text class="lbl" x="386" y="188">tag</text>
+  <path class="e" d="M475 248 L528 282"/>
+  <path class="e" d="M475 422 L528 336"/>
+  <path class="e" d="M815 118 L632 118 L632 248" stroke-dasharray="7 6"/>
+  <text class="lbl" x="700" y="108">Merkle path</text>
+  <path class="e" d="M735 290 L813 270"/>
+  <path class="e" d="M735 330 L813 412"/>
+  <path class="e" d="M1015 268 L1078 250"/>
+  <path class="e" d="M1015 418 L1078 274"/>
+  <path class="e" d="M1182 290 L1182 398"/>
+  <rect x="1098" y="328" width="168" height="30" rx="15" fill="#fff" stroke="#7e22ce" stroke-width="1.5"/>
+  <text class="lbl" x="1182" y="348" text-anchor="middle" font-weight="700">count only</text>
+  <path class="e" d="M1182 484 L1182 538"/>
+
+  <!-- legend -->
+  <g font-size="14">
+    <rect x="30" y="580" width="18" height="18" rx="4" fill="#fde68a" stroke="#b45309"/><text x="56" y="594">Input</text>
+    <rect x="130" y="580" width="18" height="18" rx="4" fill="#bfdbfe" stroke="#1d4ed8"/><text x="156" y="594">Reporter client</text>
+    <rect x="290" y="580" width="18" height="18" rx="4" fill="#bbf7d0" stroke="#15803d"/><text x="316" y="594">Public ledger</text>
+    <rect x="440" y="580" width="18" height="18" rx="4" fill="#e9d5ff" stroke="#7e22ce"/><text x="466" y="594">Aggregate proof</text>
+    <rect x="610" y="580" width="18" height="18" rx="4" fill="#fecaca" stroke="#b91c1c"/><text x="636" y="594">People and process</text>
+  </g>
+</svg>

@@ -1,0 +1,133 @@
+{
+  "siteMark": "SafeProof",
+  "title": "SafeProof: Privacy-Preserving Harassment Reporting with Nullifier-Based Sybil Resistance and Threshold Zero-Knowledge Disclosure",
+  "subtitle": "ACM womENcourage™ 2026 Hackathon · Sophia Antipolis, France",
+  "venue": "womENcourage™ Hackathon",
+  "year": 2026,
+  "seo": {
+    "siteUrl": "https://ttgenproject.github.io/safeproof-zkp/",
+    "indexable": true,
+    "description": "SafeProof lets a person report harassment and show that they are one of several distinct, real reporters, without revealing their identity or evidence. It uses OPRF-blinded identifiers, nullifiers and threshold zero-knowledge proofs.",
+    "image": "content/media/teaser.svg",
+    "keywords": [
+      "zero-knowledge proofs",
+      "harassment reporting",
+      "nullifiers",
+      "Sybil resistance",
+      "oblivious PRF",
+      "privacy",
+      "womENcourage 2026",
+      "hackathon"
+    ]
+  },
+  "authors": [
+    {
+      "name": "Le Huyen Trang (Hazel)",
+      "affiliation": "TTGen Project",
+      "url": "https://github.com/TTGenProject"
+    }
+  ],
+  "links": [
+    {
+      "label": "Code",
+      "href": "https://github.com/TTGenProject/safeproof-zkp",
+      "type": "code"
+    },
+    {
+      "label": "Protocol spec",
+      "href": "https://github.com/TTGenProject/safeproof-zkp#3-protocol",
+      "type": "paper"
+    }
+  ],
+  "hero": {
+    "eyebrow": "womENcourage™ 2026 Hackathon · Well-being in Computing",
+    "highlight": "Be counted before you are identified: prove you are one of k distinct reporters, without revealing who you are or what you hold.",
+    "authorNote": "",
+    "titleLines": [
+      "SafeProof",
+      "Privacy-Preserving Harassment Reporting",
+      "with Threshold Zero-Knowledge Disclosure"
+    ],
+    "affiliationLine": [],
+    "teaser": {
+      "src": "content/media/teaser.svg",
+      "alt": "Four anonymous reporters in different contexts file against one blinded tag. The ledger holds only nullifiers, commitments and coarse times and rejects a duplicate. A threshold proof tells the intermediary only that at least four distinct people reported.",
+      "caption": ""
+    }
+  },
+  "sections": [
+    {
+      "id": "abstract",
+      "title": "Abstract",
+      "markdown": "content/sections/abstract.md",
+      "layout": "text",
+      "media": [],
+      "showIndex": false,
+      "titleAlign": "center",
+      "enabled": true
+    },
+    {
+      "id": "problem",
+      "title": "Why Reporting Fails",
+      "markdown": "content/sections/problem.md",
+      "layout": "text",
+      "media": [],
+      "enabled": true
+    },
+    {
+      "id": "overview",
+      "title": "How It Works",
+      "markdown": "content/sections/overview.md",
+      "layout": "text",
+      "mediaDisplay": "stack",
+      "media": [
+        {
+          "kind": "figure",
+          "src": "content/media/architecture.svg",
+          "alt": "SafeProof architecture. The accused identifier is blinded into a tag, from which the reporter derives a nullifier. Evidence is committed with a salt and stays on the device. The report proof is posted to the ledger's nullifier set and commitment log. A threshold proof over k distinct nullifiers reveals only the count to an intermediary, who can send a consent-based invitation."
+        }
+      ],
+      "enabled": true
+    },
+    {
+      "id": "protocol",
+      "title": "Protocol",
+      "markdown": "content/sections/protocol.md",
+      "layout": "text",
+      "media": [],
+      "enabled": true
+    },
+    {
+      "id": "ethics",
+      "title": "Ethics & Limits",
+      "markdown": "content/sections/ethics.md",
+      "layout": "text",
+      "media": [],
+      "enabled": true
+    },
+    {
+      "id": "hackathon",
+      "title": "Why womENcourage",
+      "markdown": "content/sections/hackathon.md",
+      "layout": "text",
+      "media": [],
+      "enabled": true
+    },
+    {
+      "id": "references",
+      "title": "References",
+      "markdown": "content/sections/references.md",
+      "layout": "text",
+      "media": [],
+      "hideFromNav": true,
+      "enabled": true
+    }
+  ],
+  "bibtexPath": "content/paper.bib",
+  "footer": {
+    "label": "Page built with the Academic Project Page Template (MIT).",
+    "href": "https://github.com/YizheXie/Academic-Project-Page-Template",
+    "note": "SafeProof is a research prototype. It is not a support service, a legal instrument, or a substitute for trauma-informed care."
+  },
+  "contact": null
+}

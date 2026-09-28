@@ -1,0 +1,13 @@
+# SafeProof
+
+Project page for SafeProof, a privacy-preserving harassment and abuse reporting protocol presented at the ACM womENcourage 2026 Hackathon. It combines OPRF-blinded target identifiers, salted evidence commitments, nullifier-based Sybil resistance, and threshold zero-knowledge proofs that reveal only how many distinct people reported one target.
+
+Keywords: zero-knowledge proofs, nullifiers, Sybil resistance, oblivious PRF, harassment reporting, privacy, digital well-being
+
+Resources:
+- Main page: /
+- JSON config: /content/site.json
+- Sections: /content/sections/
+- Media: /content/media/
+- BibTeX: /content/paper.bib
+- Source and protocol notes: https://github.com/TTGenProject/safeproof-zkp

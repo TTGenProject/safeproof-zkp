@@ -2,6 +2,14 @@
 
 This repository studies a reporting protocol for workplace sexual harassment and online harassment/stalking in which a reporter can establish **that a pattern of abuse exists** and **that they are a distinct, real, independent reporter**, without disclosing their identity or the content of their evidence until they consent to do so. The construction combines a tamper-evident ledger of salted evidence commitments, a nullifier scheme for one-report-per-person-per-target, and a threshold zero-knowledge proof that attests to the *cardinality* of distinct credible reports against a target identifier while revealing nothing about the reporters or their accounts.
 
+**Project page (ACM womENcourage™ 2026 Hackathon):** https://ttgenproject.github.io/safeproof-zkp/
+
+The page is a static site built from [Academic-Project-Page-Template](https://github.com/YizheXie/Academic-Project-Page-Template) (MIT, see [assets/LICENSE-template.txt](assets/LICENSE-template.txt)). Its text lives in [content/sections/](content/sections/), its metadata in [content/site.json](content/site.json), and its figures in [content/media/](content/media/). To preview it locally, serve the repository root over HTTP, because the page fetches its JSON and Markdown:
+
+```bash
+python -m http.server 8000   # then open http://localhost:8000
+```
+
 ---
 
 ## 1. Repository structure
