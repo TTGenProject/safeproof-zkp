@@ -349,7 +349,11 @@ function renderSection(section, displayIndex) {
           </div>
   `
   const assetMarkup = [videoMarkup, mediaMarkup].filter(Boolean).join("")
-  const bodyMarkup = assetMarkup ? `${assetMarkup}${copyMarkup}` : copyMarkup
+  const bodyMarkup = !assetMarkup
+    ? copyMarkup
+    : section.mediaPosition === "after"
+      ? `${copyMarkup}${assetMarkup}`
+      : `${assetMarkup}${copyMarkup}`
   const headerMarkup = `
           <header class="section-header">
             ${

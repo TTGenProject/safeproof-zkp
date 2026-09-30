@@ -1,7 +1,7 @@
 # SafeProof: Privacy-preserving harassment reporting with nullifier-based Sybil resistance and threshold zero-knowledge disclosure.
 
 ## Overview
-The project is mainly built for the [ACM womENcourage™ 2026 Hackathon](https://womencourage.acm.org/2026/index.php/join-the-hackathon/), with the technical details in[Project page](https://ttgenproject.github.io/safeproof-zkp/), and the pitch version of the hackathon in [Slides](https://docs.google.com/presentation/d/1safyND00YSxTISNe_1uOfcl1YdIe6vnb/edit?usp=sharing)
+The project is mainly built for the [ACM womENcourage™ 2026 Hackathon](https://womencourage.acm.org/2026/index.php/join-the-hackathon/), with the technical details in [Project page](https://ttgenproject.github.io/safeproof-zkp/), and the pitch version of the hackathon in [Slides](https://docs.google.com/presentation/d/1safyND00YSxTISNe_1uOfcl1YdIe6vnb/edit?usp=sharing)
 
 Reporting harassment means exposing yourself before you know whether anyone else has reported the same person. SafeProof lets a reporter prove two things without revealing their identity or their evidence:
 

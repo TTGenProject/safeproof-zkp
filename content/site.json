@@ -45,7 +45,7 @@
     },
     {
       "label": "Protocol spec",
-      "href": "https://github.com/TTGenProject/safeproof-zkp#protocol",
+      "href": "https://drive.google.com/drive/folders/15wWrC2TT-hOh334LnQUhcnDMyq4AebPK?usp=sharing",
       "type": "paper"
     }
   ],
@@ -71,10 +71,10 @@
       "title": "Abstract",
       "markdown": "content/sections/abstract.md",
       "layout": "text",
+      "mediaPosition": "after",
       "video": {
         "src": "content/media/demo.mp4",
         "title": "SafeProof demo",
-        "caption": "SafeProof demo replay",
         "ratio": "16 / 9",
         "controls": true,
         "playsInline": true
