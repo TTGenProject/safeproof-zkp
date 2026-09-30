@@ -308,18 +308,21 @@ select {
   width: 100%;
   max-width: 60rem;
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2px 0.45em;
   font-size: clamp(0.98rem, 1.4vw, 1.18rem);
   line-height: 1.5;
   text-align: center;
 }
 
 .hero__author-entry {
-  display: inline;
   white-space: nowrap;
 }
 
 .hero__author-entry:not(:last-child)::after {
-  content: ", ";
+  content: ",";
 }
 
 .hero__author {
