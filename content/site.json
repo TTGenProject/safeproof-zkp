@@ -22,10 +22,15 @@
   },
   "authors": [
     {
-      "name": "Le Huyen Trang (Hazel)",
+      "name": "Huyen-Trang Le",
       "affiliation": "TTGen Project",
       "url": "https://github.com/TTGenProject"
-    }
+    },
+    { "name": "Mar Beccerra I Uicardaga" },
+    { "name": "Leire Fuxuan Martinez de Treviro Garcia" },
+    { "name": "Maria Arques Vargas" },
+    { "name": "Mar Toledanc Moreno" },
+    { "name": "Uxia Illarisami Perez Aguirre" }
   ],
   "links": [
     {
@@ -66,6 +71,14 @@
       "title": "Abstract",
       "markdown": "content/sections/abstract.md",
       "layout": "text",
+      "video": {
+        "src": "content/media/demo.mp4",
+        "title": "SafeProof demo",
+        "caption": "SafeProof demo replay",
+        "ratio": "16 / 9",
+        "controls": true,
+        "playsInline": true
+      },
       "media": [],
       "showIndex": false,
       "titleAlign": "center",
