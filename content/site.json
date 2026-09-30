@@ -133,7 +133,7 @@
     },
     {
       "id": "faq",
-      "title": "Questions & Answers",
+      "title": "Q&A",
       "markdown": "content/sections/faq.md",
       "layout": "text",
       "media": [],

@@ -106,11 +106,12 @@ select {
   margin-left: auto;
   flex-wrap: wrap;
   justify-content: flex-end;
-  gap: 10px;
+  gap: 4px;
 }
 
 .site-nav__link {
   padding: 8px 12px;
+  white-space: nowrap;
   border-radius: 999px;
   color: var(--muted);
   transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
