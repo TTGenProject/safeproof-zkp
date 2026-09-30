@@ -132,6 +132,14 @@
       "enabled": true
     },
     {
+      "id": "faq",
+      "title": "Questions & Answers",
+      "markdown": "content/sections/faq.md",
+      "layout": "text",
+      "media": [],
+      "enabled": true
+    },
+    {
       "id": "references",
       "title": "References",
       "markdown": "content/sections/references.md",
