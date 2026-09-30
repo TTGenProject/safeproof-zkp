@@ -120,6 +120,11 @@
           "kind": "figure",
           "src": "content/media/architecture.svg",
           "alt": "SafeProof architecture. The accused identifier is blinded into a tag, from which the reporter derives a nullifier. Evidence is committed with a salt and stays on the device. The report proof is posted to the ledger's nullifier set and commitment log. A threshold proof over k distinct nullifiers reveals only the count to an intermediary, who can send a consent-based invitation."
+        },
+        {
+          "kind": "figure",
+          "src": "content/media/usecase.svg",
+          "alt": "SafeProof use case diagram in plain language. The reporter (prover) signs up once, hides the accused's name, keeps evidence private, reports anonymously and can accept or decline an invitation. An identity checker confirms each reporter is a real person, and the institution with advocates sets how many reports are needed. Zero-knowledge proofs publish and verify each report proof. The smart contract blocks double reports, counts distinct reporters and runs the consent policy check. Key management generates and manages keys and blinds names with a secret key. HR or an NGO (verifier) sees only the count, invites reporters and starts an investigation only with consent."
         }
       ],
       "enabled": true

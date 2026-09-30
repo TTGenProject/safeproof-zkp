@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 1300" role="img" aria-labelledby="t d">
+  <title id="t">SafeProof use case diagram</title>
+  <desc id="d">Use case diagram in plain language. The reporter, who proves their report, signs up once, hides the accused's name, keeps their evidence private, reports anonymously and can accept or decline an invitation. An identity checker confirms each reporter is a real person, and the institution with advocates sets how many reports are needed. Zero-knowledge proofs publish and verify each report proof. The smart contract blocks double reports, counts distinct reporters and runs the consent policy check. Key management generates and manages keys and blinds names with a secret key. HR or an NGO, the verifier, sees only the count, invites reporters and starts an investigation only with their consent.</desc>
+  <style>
+    text { font-family: "Nunito", "Segoe UI", "Helvetica Neue", Arial, sans-serif; fill: #1f2d5c; }
+    .uc { font-size: 16px; font-weight: 600; }
+    .actor { font-size: 16px; font-weight: 600; }
+    .title { font-size: 30px; font-weight: 700; }
+    .line { stroke: #1f2d5c; stroke-width: 1.8; fill: none; stroke-linecap: round; }
+    .fig { stroke: #1f2d5c; stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .ic { fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <rect width="1240" height="1300" rx="20" fill="#ffffff"/>
+  <rect x="300" y="80" width="640" height="1180" rx="18" fill="#f3f6fe" stroke="#a9bdf2" stroke-width="2"/>
+  <rect x="322" y="48" width="440" height="62" rx="31" fill="#dfe4fb" stroke="#b8c4f3" stroke-width="2"/>
+  <text class="title" x="542" y="90" text-anchor="middle">SafeProof Reporting System</text>
+  <path class="line" d="M180 370L352 170"/>
+  <path class="line" d="M180 370L352 270"/>
+  <path class="line" d="M180 370L352 370"/>
+  <path class="line" d="M180 370L352 470"/>
+  <path class="line" d="M180 370L352 570"/>
+  <path class="line" d="M180 760L352 760"/>
+  <path class="line" d="M180 960L352 960"/>
+  <path class="line" d="M1060 220L888 170"/>
+  <path class="line" d="M1060 220L888 270"/>
+  <path class="line" d="M1060 500L888 400"/>
+  <path class="line" d="M1060 500L888 500"/>
+  <path class="line" d="M1060 500L888 600"/>
+  <path class="line" d="M1060 780L888 730"/>
+  <path class="line" d="M1060 780L888 830"/>
+  <path class="line" d="M1060 1060L888 960"/>
+  <path class="line" d="M1060 1060L888 1060"/>
+  <path class="line" d="M1060 1060L888 1160"/>
+  <ellipse cx="460" cy="170" rx="108" ry="42" fill="#e8e2fc" stroke="#8e79d9" stroke-width="2"/>
+  <g class="ic" stroke="#6f58c4" transform="translate(449 144) scale(0.92)"><rect x="2" y="5" width="20" height="14" rx="2"/><circle cx="8" cy="12" r="2.5"/><path d="M14 10h5M14 14h4"/></g>
+  <text class="uc" x="460" y="186" text-anchor="middle">Sign up once</text>
+  <ellipse cx="460" cy="270" rx="108" ry="42" fill="#e8e2fc" stroke="#8e79d9" stroke-width="2"/>
+  <g class="ic" stroke="#6f58c4" transform="translate(449 236) scale(0.92)"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></g>
+  <text class="uc" x="460" y="278" text-anchor="middle">Hide the accused's</text>
+  <text class="uc" x="460" y="297" text-anchor="middle">name</text>
+  <ellipse cx="460" cy="370" rx="108" ry="42" fill="#e8e2fc" stroke="#8e79d9" stroke-width="2"/>
+  <g class="ic" stroke="#6f58c4" transform="translate(449 336) scale(0.92)"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></g>
+  <text class="uc" x="460" y="378" text-anchor="middle">Keep evidence</text>
+  <text class="uc" x="460" y="397" text-anchor="middle">private</text>
+  <ellipse cx="460" cy="470" rx="108" ry="42" fill="#e8e2fc" stroke="#8e79d9" stroke-width="2"/>
+  <g class="ic" stroke="#6f58c4" transform="translate(449 436) scale(0.92)"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></g>
+  <text class="uc" x="460" y="478" text-anchor="middle">Report</text>
+  <text class="uc" x="460" y="497" text-anchor="middle">anonymously</text>
+  <ellipse cx="460" cy="570" rx="108" ry="42" fill="#e8e2fc" stroke="#8e79d9" stroke-width="2"/>
+  <g class="ic" stroke="#6f58c4" transform="translate(449 536) scale(0.92)"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></g>
+  <text class="uc" x="460" y="578" text-anchor="middle">Accept or decline</text>
+  <text class="uc" x="460" y="597" text-anchor="middle">invitation</text>
+  <ellipse cx="460" cy="760" rx="108" ry="42" fill="#d9f3e8" stroke="#43b08a" stroke-width="2"/>
+  <g class="ic" stroke="#23916b" transform="translate(449 726) scale(0.92)"><circle cx="9" cy="7" r="4"/><path d="M1 21v-2a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2M16 11l2 2 4-4"/></g>
+  <text class="uc" x="460" y="768" text-anchor="middle">Confirm a real</text>
+  <text class="uc" x="460" y="787" text-anchor="middle">person</text>
+  <ellipse cx="460" cy="960" rx="108" ry="42" fill="#fcdfe8" stroke="#dc5f86" stroke-width="2"/>
+  <g class="ic" stroke="#c43d68" transform="translate(449 926) scale(0.92)"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></g>
+  <text class="uc" x="460" y="968" text-anchor="middle">Set how many</text>
+  <text class="uc" x="460" y="987" text-anchor="middle">reports are needed</text>
+  <ellipse cx="780" cy="170" rx="108" ry="42" fill="#d7f0f4" stroke="#3aa6b9" stroke-width="2"/>
+  <g class="ic" stroke="#1f8797" transform="translate(769 136) scale(0.92)"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/></g>
+  <text class="uc" x="780" y="178" text-anchor="middle">Publish report</text>
+  <text class="uc" x="780" y="197" text-anchor="middle">proof</text>
+  <ellipse cx="780" cy="270" rx="108" ry="42" fill="#d7f0f4" stroke="#3aa6b9" stroke-width="2"/>
+  <g class="ic" stroke="#1f8797" transform="translate(769 236) scale(0.92)"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></g>
+  <text class="uc" x="780" y="278" text-anchor="middle">Verify ZK</text>
+  <text class="uc" x="780" y="297" text-anchor="middle">proof</text>
+  <ellipse cx="780" cy="400" rx="108" ry="42" fill="#dfe8fb" stroke="#6b8fdc" stroke-width="2"/>
+  <g class="ic" stroke="#3f66bf" transform="translate(769 366) scale(0.92)"><circle cx="12" cy="12" r="10"/><path d="M4.9 4.9l14.2 14.2"/></g>
+  <text class="uc" x="780" y="408" text-anchor="middle">Block double</text>
+  <text class="uc" x="780" y="427" text-anchor="middle">reports</text>
+  <ellipse cx="780" cy="500" rx="108" ry="42" fill="#dfe8fb" stroke="#6b8fdc" stroke-width="2"/>
+  <g class="ic" stroke="#3f66bf" transform="translate(769 466) scale(0.92)"><circle cx="9" cy="7" r="4"/><path d="M1 21v-2a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2M16 3.1a4 4 0 0 1 0 7.8M23 21v-2a4 4 0 0 0-3-3.9"/></g>
+  <text class="uc" x="780" y="508" text-anchor="middle">Count distinct</text>
+  <text class="uc" x="780" y="527" text-anchor="middle">reporters</text>
+  <ellipse cx="780" cy="600" rx="108" ry="42" fill="#dfe8fb" stroke="#6b8fdc" stroke-width="2"/>
+  <g class="ic" stroke="#3f66bf" transform="translate(769 566) scale(0.92)"><rect x="5" y="4" width="14" height="18" rx="2"/><rect x="9" y="2" width="6" height="4" rx="1"/><path d="M9 13l2 2 4-4"/></g>
+  <text class="uc" x="780" y="608" text-anchor="middle">Consent policy</text>
+  <text class="uc" x="780" y="627" text-anchor="middle">check</text>
+  <ellipse cx="780" cy="730" rx="108" ry="42" fill="#fde7d7" stroke="#e38a4a" stroke-width="2"/>
+  <g class="ic" stroke="#c4661f" transform="translate(769 696) scale(0.92)"><circle cx="7.5" cy="15.5" r="4.5"/><path d="M10.7 12.3 21 2M16 7l3 3M18.5 4.5l2 2"/></g>
+  <text class="uc" x="780" y="738" text-anchor="middle">Generate &amp;</text>
+  <text class="uc" x="780" y="757" text-anchor="middle">manage keys</text>
+  <ellipse cx="780" cy="830" rx="108" ry="42" fill="#fde7d7" stroke="#e38a4a" stroke-width="2"/>
+  <g class="ic" stroke="#c4661f" transform="translate(769 796) scale(0.92)"><path d="M17.9 17.9A10 10 0 0 1 12 20C5 20 1 12 1 12a18 18 0 0 1 5.1-5.9M9.9 4.2A9 9 0 0 1 12 4c7 0 11 8 11 8a18 18 0 0 1-2.2 3.2M1 1l22 22"/></g>
+  <text class="uc" x="780" y="838" text-anchor="middle">Blind names with</text>
+  <text class="uc" x="780" y="857" text-anchor="middle">secret key</text>
+  <ellipse cx="780" cy="960" rx="108" ry="42" fill="#fdf1cc" stroke="#e0a92e" stroke-width="2"/>
+  <g class="ic" stroke="#c18410" transform="translate(769 926) scale(0.92)"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></g>
+  <text class="uc" x="780" y="968" text-anchor="middle">See only the</text>
+  <text class="uc" x="780" y="987" text-anchor="middle">count</text>
+  <ellipse cx="780" cy="1060" rx="108" ry="42" fill="#fdf1cc" stroke="#e0a92e" stroke-width="2"/>
+  <g class="ic" stroke="#c18410" transform="translate(769 1034) scale(0.92)"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></g>
+  <text class="uc" x="780" y="1076" text-anchor="middle">Invite reporters</text>
+  <ellipse cx="780" cy="1160" rx="108" ry="42" fill="#fdf1cc" stroke="#e0a92e" stroke-width="2"/>
+  <g class="ic" stroke="#c18410" transform="translate(769 1126) scale(0.92)"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></g>
+  <text class="uc" x="780" y="1168" text-anchor="middle">Start investigation</text>
+  <text class="uc" x="780" y="1187" text-anchor="middle">(with consent)</text>
+  <g class="fig"><circle cx="150" cy="338" r="15"/><path d="M150 353V392M122 370H178M150 392L128 422M150 392L172 422"/></g>
+  <rect x="100.8" y="434" width="98.4" height="56" rx="16" fill="#ebe8fb"/>
+  <text class="actor" x="150" y="457" text-anchor="middle">Reporter</text>
+  <text class="actor" x="150" y="477" text-anchor="middle">(Prover)</text>
+  <g class="fig"><circle cx="150" cy="728" r="15"/><path d="M150 743V782M122 760H178M150 782L128 812M150 782L172 812"/></g>
+  <rect x="65.6" y="824" width="168.8" height="36" rx="16" fill="#ebe8fb"/>
+  <text class="actor" x="150" y="847" text-anchor="middle">Identity checker</text>
+  <g class="fig"><circle cx="150" cy="928" r="15"/><path d="M150 943V982M122 960H178M150 982L128 1012M150 982L172 1012"/></g>
+  <rect x="78.8" y="1024" width="142.4" height="56" rx="16" fill="#ebe8fb"/>
+  <text class="actor" x="150" y="1047" text-anchor="middle">Institution +</text>
+  <text class="actor" x="150" y="1067" text-anchor="middle">advocates</text>
+  <g class="fig"><circle cx="1090" cy="188" r="15"/><path d="M1090 203V242M1062 220H1118M1090 242L1068 272M1090 242L1112 272"/></g>
+  <rect x="1014.4" y="284" width="151.20000000000002" height="56" rx="16" fill="#ebe8fb"/>
+  <text class="actor" x="1090" y="307" text-anchor="middle">Zero-Knowledge</text>
+  <text class="actor" x="1090" y="327" text-anchor="middle">Proofs (ZKPs)</text>
+  <g class="fig"><circle cx="1090" cy="468" r="15"/><path d="M1090 483V522M1062 500H1118M1090 522L1068 552M1090 522L1112 552"/></g>
+  <rect x="996.8" y="564" width="186.4" height="56" rx="16" fill="#ebe8fb"/>
+  <text class="actor" x="1090" y="587" text-anchor="middle">Smart Contract</text>
+  <text class="actor" x="1090" y="607" text-anchor="middle">(SC Administrator)</text>
+  <g class="fig"><circle cx="1090" cy="748" r="15"/><path d="M1090 763V802M1062 780H1118M1090 802L1068 832M1090 802L1112 832"/></g>
+  <rect x="992.4" y="844" width="195.20000000000002" height="56" rx="16" fill="#ebe8fb"/>
+  <text class="actor" x="1090" y="867" text-anchor="middle">Key Management</text>
+  <text class="actor" x="1090" y="887" text-anchor="middle">(Key Administrator)</text>
+  <g class="fig"><circle cx="1090" cy="1028" r="15"/><path d="M1090 1043V1082M1062 1060H1118M1090 1082L1068 1112M1090 1082L1112 1112"/></g>
+  <rect x="1032" y="1124" width="116" height="56" rx="16" fill="#ebe8fb"/>
+  <text class="actor" x="1090" y="1147" text-anchor="middle">HR / NGO</text>
+  <text class="actor" x="1090" y="1167" text-anchor="middle">(Verifier)</text>
+</svg>
