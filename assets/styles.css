@@ -536,6 +536,36 @@ select {
   text-align: left;
 }
 
+.section-collapse {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+}
+
+.section-collapse__body {
+  /* Contain KaTeX's absolutely positioned MathML so hidden text is clipped
+     instead of stretching the page height. */
+  position: relative;
+}
+
+.section-collapse.is-collapsed .section-collapse__body {
+  max-height: 420px;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to bottom, #000 65%, transparent);
+  mask-image: linear-gradient(to bottom, #000 65%, transparent);
+}
+
+.section-collapse__toggle {
+  min-height: 40px;
+  font-size: 0.92rem;
+}
+
+.section-collapse__toggle[hidden] {
+  display: none;
+}
+
 .section-copy--wide {
   width: min(100%, var(--reading-width-wide));
   max-width: var(--reading-width-wide);
@@ -936,18 +966,10 @@ select {
   padding: 18px 22px;
 }
 
+/* Sections stay visible at all times: a scroll fade-in left blank areas on
+   fast scrolls, menu jumps, and around collapsed "View more" sections. */
 .reveal {
-  opacity: 0;
-  transform: translateY(18px);
-}
-
-.is-ready .reveal {
-  transition: opacity 520ms ease, transform 520ms ease;
-}
-
-.reveal.is-visible {
   opacity: 1;
-  transform: translateY(0);
 }
 
 @media (max-width: 920px) {

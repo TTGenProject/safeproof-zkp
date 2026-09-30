@@ -43,6 +43,7 @@ async function initPage() {
 
     bindCopyButton(bibtex)
     registerMediaSliders()
+    registerCollapsibleSections()
     registerRevealAnimations()
     registerNavTracking()
     status.hidden = true
@@ -344,8 +345,11 @@ function renderSection(section, displayIndex) {
   const titleAlignClass = section.titleAlign === "center" ? " page-section--title-center" : ""
   const copyAlignClass = section.copyAlign === "center" ? " page-section--copy-center" : ""
   const copyMarkup = `
-          <div class="${copyClass}">
-            ${section.html}
+          <div class="section-collapse" data-collapse>
+            <div class="${copyClass} section-collapse__body" id="${escapeAttribute(section.id)}-copy">
+              ${section.html}
+            </div>
+            <button class="button button--ghost section-collapse__toggle" type="button" aria-controls="${escapeAttribute(section.id)}-copy" aria-expanded="false" hidden>View more</button>
           </div>
   `
   const assetMarkup = [videoMarkup, mediaMarkup].filter(Boolean).join("")
@@ -612,6 +616,31 @@ function bindCopyButton(bibtex) {
   })
 }
 
+const COLLAPSED_HEIGHT = 420
+
+function registerCollapsibleSections() {
+  document.querySelectorAll("[data-collapse]").forEach((wrap) => {
+    const body = wrap.querySelector(".section-collapse__body")
+    const toggle = wrap.querySelector(".section-collapse__toggle")
+
+    // Only collapse when hiding a meaningful amount of text.
+    if (!body || !toggle || body.scrollHeight <= COLLAPSED_HEIGHT * 1.35) {
+      return
+    }
+
+    wrap.classList.add("is-collapsed")
+    toggle.hidden = false
+    toggle.addEventListener("click", () => {
+      const collapsed = wrap.classList.toggle("is-collapsed")
+      toggle.textContent = collapsed ? "View more" : "View less"
+      toggle.setAttribute("aria-expanded", String(!collapsed))
+      if (collapsed) {
+        wrap.closest(".page-section")?.scrollIntoView({ behavior: "smooth", block: "start" })
+      }
+    })
+  })
+}
+
 function registerRevealAnimations() {
   const elements = document.querySelectorAll(".reveal:not(.is-visible)")
 
@@ -625,7 +654,9 @@ function registerRevealAnimations() {
       })
     },
     {
-      threshold: 0.14,
+      // Ratio is relative to the target, so a tall section (e.g. Q&A) never
+      // reaches a high threshold; fire as soon as any part enters view.
+      threshold: 0,
       rootMargin: "0px 0px -8% 0px"
     }
   )
@@ -661,7 +692,7 @@ function registerNavTracking() {
       })
     },
     {
-      threshold: [0.15, 0.35, 0.6],
+      threshold: [0, 0.15, 0.35, 0.6],
       rootMargin: "-35% 0px -45% 0px"
     }
   )

@@ -85,6 +85,23 @@
       "enabled": true
     },
     {
+      "id": "case",
+      "title": "In Her Own Words",
+      "markdown": "content/sections/case.md",
+      "layout": "text",
+      "mediaPosition": "after",
+      "video": {
+        "src": "https://www.youtube-nocookie.com/embed/EKnfLhh3ioI",
+        "title": "AP video report: Vietnam charges man with rape of American intern who says police asked her to reenact the assault",
+        "caption": "AP video report: “Vietnam charges man with rape of American intern who says police asked her to reenact the assault.”",
+        "ratio": "16 / 9"
+      },
+      "media": [],
+      "titleAlign": "center",
+      "hideFromNav": true,
+      "enabled": true
+    },
+    {
       "id": "problem",
       "title": "Why Reporting Fails",
       "markdown": "content/sections/problem.md",
